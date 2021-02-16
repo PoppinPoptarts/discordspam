@@ -1,0 +1,34 @@
+#DISCORD SPAMMER
+
+#Spam Made By Noobmaster69
+#Spam Delay, Logging Made By PoppinPoptarts
+
+
+import pyautogui, time, num2words
+string = input("Text To Spam : ")
+timestospam = input("Times to Spam : ")
+textdelay = input("Spam delay : ")
+Logging = input("Do you want to Enable Logging? 1 for Yes and 2 for no: ")
+timestospam = int(timestospam)
+textdelay = int(textdelay)
+time.sleep(5)
+for word in range(timestospam):
+    temp = word + 1
+    temp = num2words.num2words(temp)
+    time.sleep(textdelay)
+    pyautogui.typewrite(string + " ")
+
+    if Logging == ("1"):
+        pyautogui.typewrite(temp + " " + "/" + " " + num2words.num2words(timestospam))
+        
+    if string[0]=='@':
+        time.sleep(1)
+        pyautogui.press("enter")
+    pyautogui.press("enter")
+else:
+    if Logging == ("1"):
+        pyautogui.typewrite("Finished Spamming")
+        pyautogui.press("enter")
+
+    elif Logging == "2":
+        pyautogui.typewrite(" ")
