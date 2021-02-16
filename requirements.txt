@@ -1,0 +1,5 @@
+Things you need to install for this spam to work
+
+$pip install pyautogui
+$pip install time
+$pip install num2words
