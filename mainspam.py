@@ -32,8 +32,6 @@ for word in range(timestospam):
 
     if Logging == ("1"):
         pyautogui.typewrite(temp + " " + "/" + " " + num2words.num2words(timestospam))
-    else:
-        print("Finished Spamming")
     if Logging == ("2"):
             print(temp + " " + "/" + " " + num2words.num2words(timestospam))
 
