@@ -4,14 +4,25 @@
 #Spam Delay, Logging Made By PoppinPoptarts
 
 
-import pyautogui, time, num2words
+import pyautogui, time, num2words, sys
 string = input("Text To Spam : ")
 timestospam = input("Times to Spam : ")
 textdelay = input("Spam delay : ")
 Logging = input("Do you want to Enable Logging? 1 for Yes and 2 for no: ")
 timestospam = int(timestospam)
 textdelay = int(textdelay)
+
+if timestospam >= (10000):
+    print("You cannot spam above 10000 lines")
+    sys.exit(0)
+print("Text/Settings Approved, 5 seconds before spam")
+
 time.sleep(5)
+
+print("-------------------------------")
+print("Beganning Terminal Logging")
+print("-------------------------------")
+
 for word in range(timestospam):
     temp = word + 1
     temp = num2words.num2words(temp)
@@ -20,7 +31,10 @@ for word in range(timestospam):
 
     if Logging == ("1"):
         pyautogui.typewrite(temp + " " + "/" + " " + num2words.num2words(timestospam))
-        
+
+    if Logging == ("2"):
+            print(temp + " " + "/" + " " + num2words.num2words(timestospam))
+
     if string[0]=='@':
         time.sleep(1)
         pyautogui.press("enter")
