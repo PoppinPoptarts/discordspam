@@ -1,7 +1,8 @@
 #DISCORD SPAMMER
 
-#Spam Made By Noobmaster69
-#Spam Delay, Logging Made By PoppinPoptarts
+#Youtube - https://www.youtube.com/channel/UCYHJ7fQ6FtJyx3YxSWwOhHg
+#Noobmaster69 Github - https://github.com/noobymaster69
+#PoppinPoptarts GitHub - https://github.com/PoppinPoptarts
 
 
 import pyautogui, time, num2words, sys
@@ -31,7 +32,8 @@ for word in range(timestospam):
 
     if Logging == ("1"):
         pyautogui.typewrite(temp + " " + "/" + " " + num2words.num2words(timestospam))
-
+    else:
+        print("Finished Spamming")
     if Logging == ("2"):
             print(temp + " " + "/" + " " + num2words.num2words(timestospam))
 
@@ -45,4 +47,5 @@ else:
         pyautogui.press("enter")
 
     elif Logging == "2":
-        pyautogui.typewrite(" ")
+        pyautogui.typewrite("")
+        print("Finished Spamming")
